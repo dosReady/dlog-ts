@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2017",
+        "resolveJsonModule": true,
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
