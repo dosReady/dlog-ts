@@ -1,8 +1,8 @@
-import * as Koa from 'koa'
 import {createConnection} from "typeorm";
 import {dbConfig} from '../../config'
+import { CustomContext } from '../../@types';
 
-export default async (ctx: Koa.Context, next: () => Promise<any>) => {
+export default async (ctx: CustomContext, next: () => Promise<any>) => {
     const connection = await createConnection({
         type: "mysql",
         host: dbConfig.host,
@@ -15,6 +15,6 @@ export default async (ctx: Koa.Context, next: () => Promise<any>) => {
         ],
         synchronize: true
     })
-    console.log(ctx)
+    ctx.dbconn = connection
     next()
 }
