@@ -1,4 +1,4 @@
-import {Entity, Column, PrimaryColumn} from 'typeorm'
+import {Entity, Column, PrimaryColumn, UpdateDateColumn, CreateDateColumn} from 'typeorm'
 
 @Entity()
 export default class DlogUser {
@@ -21,15 +21,9 @@ export default class DlogUser {
     })
     user_call: string
 
-    @Column({
-        type: 'timestamp',
-        default: new Date()
-    })
+    @CreateDateColumn()
     create_date: Date
 
-    @Column({
-        type: 'timestamp',
-        default: new Date()
-    })
+    @UpdateDateColumn()
     update_date: Date
 }

@@ -28,8 +28,8 @@
     "typeorm": "^0.2.9"
   },
   "scripts": {
-    "build-server": "tslint --project . && tsc",
-    "start": "nodemon --watch src/**/* -e ts,tsx --exec ts-node src/app.ts"
+    "ts-node": "ts-node",
+    "start": "nodemon --exec yarn ts-node ./src/app.ts"
   },
   "author": "",
   "license": "ISC"

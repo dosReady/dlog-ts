@@ -1,3 +1,4 @@
 node_modules/
 backend/src/config/
 dist/
+.DS_Store
